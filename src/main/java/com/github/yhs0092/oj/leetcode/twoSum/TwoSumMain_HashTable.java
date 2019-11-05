@@ -3,7 +3,7 @@ package com.github.yhs0092.oj.leetcode.twoSum;
 import java.util.HashMap;
 import java.util.Map;
 
-public class TwoSumMain_HashTable {
+public class TwoSumMain_HashTable implements TwoSum {
   public int[] twoSum(int[] nums, int target) {
     final int[] result = new int[2];
     // num:index_of_num
@@ -15,7 +15,7 @@ public class TwoSumMain_HashTable {
       if (null != toFindIndex) {
         result[0] = toFindIndex;
         result[1] = i;
-        break;
+        return result;
       }
       map.put(num, i);
     }

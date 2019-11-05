@@ -5,13 +5,11 @@ import java.util.Arrays;
 /**
  * 两数之和
  */
-public class TwoSumMain {
+public class TwoSumMain implements TwoSum {
   public int[] twoSum(int[] nums, int target) {
     int[] sortedNums = getSortedNums(nums);
 
-    int boarder = locateSearchBoarder(target, sortedNums);
-
-    int largeNumIndex = boarder;
+    int largeNumIndex = locateSearchBoarder(target, sortedNums);
     int smallNumIndex = 0;
     while (largeNumIndex > 0) {
       while (target > sortedNums[smallNumIndex] + sortedNums[largeNumIndex]) {
